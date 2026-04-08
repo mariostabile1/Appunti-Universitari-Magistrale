@@ -4,9 +4,23 @@
 .LSOverride
 ._*
 
-# Obsidian
+# Obsidian - workspace state (generated automatically, not user data)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+.obsidian/workspace*.json
+.obsidian/workspace *.json
+
+# Obsidian - plugin binaries (auto-downloaded, not user data)
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/manifest.json
+
+# Obsidian - themes (auto-downloaded)
+.obsidian/themes/
+
+# Obsidian - cache and icons
+.obsidian/cache
+.obsidian/icons/
 
 # Trash
 .trash/
