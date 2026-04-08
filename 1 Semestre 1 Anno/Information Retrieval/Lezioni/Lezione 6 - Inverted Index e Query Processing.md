@@ -1,0 +1,30 @@
+## <font color="#244061">Lezione 6: Indici Inversi e Query Processing</font>
+
+### <font color="#548dd4">Struttura dell'Indice Inverso: Dictionary e Posting Lists</font>
+
+L'Indice Inverso è la struttura dati fondamentale nell'Information Retrieval, progettata per permettere ricerche veloci su grandi collezioni di documenti evitando la scansione sequenziale del testo. Questa struttura è logicamente divisa in due componenti principali: il **Dictionary** (o vocabolario) e le **Posting Lists**.
+
+Il **Dictionary** è la struttura che contiene l'insieme dei termini unici estratti dalla collezione. Solitamente mantenuto in memoria principale (RAM) per un accesso rapido, ogni voce del dizionario punta alla corrispondente Posting List e contiene metadati statistici, come la _document frequency_ ($df_t$), utile per il calcolo dei pesi (es. IDF).
+
+Le **Posting Lists** sono liste collegate associate a ciascun termine del dizionario. Una singola Posting List contiene l'elenco dei _docID_ (identificativi univoci dei documenti) in cui quel termine appare. Per ottimizzare le operazioni di intersezione e unione, i docID all'interno di ogni lista sono quasi sempre ordinati in modo crescente ($docID_1 < docID_2 < \dots$). Mentre il dizionario risiede spesso in RAM, le posting lists, che possono essere molto voluminose, sono tipicamente memorizzate su disco e caricate in blocchi quando necessario.
+### <font color="#548dd4">Strategie di scansione: Term-at-a-time (TAAT) vs Document-at-a-time (DAAT)</font>
+
+Per calcolare i punteggi di rilevanza di una query composta da più termini, il sistema deve attraversare le posting lists. Esistono due strategie principali per gestire questo flusso: **Term-at-a-time** (TAAT) e **Document-at-a-time** (DAAT).
+
+Nella strategia **Term-at-a-time** (TAAT), il sistema elabora completamente la posting list di un termine della query prima di passare al termine successivo. Questo approccio richiede l'uso di **accumulatori**: un vettore di contatori, uno per ogni documento nella collezione, inizializzati a zero. Man mano che si scorre la lista di un termine, si aggiorna l'accumulatore del documento corrispondente sommando il contributo parziale del termine. Il vantaggio è l'efficienza nell'accesso al disco (letture sequenziali lunghe), ma lo svantaggio principale è l'elevato consumo di memoria, poiché è necessario mantenere attivi gli accumulatori per tutti i documenti potenzialmente rilevanti.
+
+La strategia **Document-at-a-time** (DAAT), invece, elabora le posting lists di tutti i termini della query in parallelo. Il sistema mantiene dei puntatori correnti su ciascuna lista e avanza simultaneamente attraverso i docID. Si calcola il punteggio finale per un documento specifico combinando i contributi di tutti i termini presenti, prima di passare al documento successivo (il _next docID_ più piccolo tra le liste correnti). Questo metodo è molto efficiente per la memoria, non richiedendo un grande array di accumulatori, ed è particolarmente adatto per le ottimizzazioni _top-k_, poiché permette di scartare documenti non promettenti senza calcolarne il punteggio completo. Tuttavia, richiede continui salti (seek) tra le diverse liste, il che può essere costoso in termini di I/O.
+### <font color="#548dd4">Ottimizzazioni: NextGEQ, Binary/Exponential Search e Skip pointers</font>
+
+L'operazione fondamentale nel processamento delle query, specialmente per l'intersezione (query booleane AND) o nel DAAT, è trovare il primo docID nella lista che sia maggiore o uguale a un certo valore target $k$. Questa operazione è definita come **NextGEQ** ($k$). Per velocizzare questa ricerca all'interno di lunghe liste ordinate, si adottano diverse tecniche.
+
+La ricerca lineare è spesso troppo lenta. Si può utilizzare la **Binary Search** (ricerca binaria) se la lista è memorizzata in un array contiguo, offrendo una complessità $O(\log n)$. Tuttavia, quando l'elemento cercato è probabilmente vicino alla posizione corrente del puntatore, la **Exponential Search** (o Galloping Search) risulta più efficace: si controllano indici a distanze esponenziali ($1, 2, 4, 8, \dots$) fino a superare il target, e poi si esegue una ricerca binaria solo nell'intervallo identificato.
+
+Un'altra ottimizzazione strutturale è l'uso degli **Skip pointers**. Questi sono collegamenti aggiuntivi inseriti nella posting list che permettono di "saltare" gruppi di docID. Invece di scorrere la lista elemento per elemento, il sistema controlla il valore puntato dallo skip pointer; se questo è ancora inferiore al target cercato, si segue il salto, evitando di leggere i valori intermedi. Se la lista ha lunghezza $L$, l'uso ottimale degli skip pointers (spaziati di $\sqrt{L}$) riduce la complessità di scansione da $O(L)$ a $O(\sqrt{L})$.
+### <font color="#548dd4">Indici Posizionali: Gestione delle Phrase Queries</font>
+
+L'indice inverso standard permette di sapere _se_ un termine è presente in un documento, ma non _dove_. Questo rende impossibile rispondere efficacemente alle **Phrase Queries** (es. "Information Retrieval"), dove l'ordine e l'adiacenza dei termini sono vincolanti.
+
+Per supportare queste query si utilizza un Indice Posizionale. In questa struttura estesa, ogni voce nella posting list non contiene solo il docID, ma una lista delle posizioni (offset delle parole) in cui il termine appare all'interno di quel documento:
+## $$<term, df_t> \rightarrow \dots \rightarrow <docID, [pos_1, pos_2, \dots]> \rightarrow \dots$$
+Durante il query processing di una frase "T1 T2", il sistema prima interseca le liste dei docID per trovare i documenti che contengono entrambi i termini. Successivamente, esegue un controllo di prossimità sulle liste delle posizioni: verifica se esiste almeno una coppia di posizioni tale che $pos(T2) = pos(T1) + 1$. Sebbene essenziali per le ricerche di frasi e di prossimità (NEAR operator), gli indici posizionali aumentano significativamente la dimensione dell'indice, spesso di un fattore da 2 a 4 rispetto a un indice non posizionale.

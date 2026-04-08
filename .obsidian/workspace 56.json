@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "bd0c95c53a5671d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "71a44857d02b8824",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec37a87f4578d50b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lezione 5 - Cablaggio e Tecnologie di Trasmissione"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6726ad606d36e594",
+    "type": "split",
+    "children": [
+      {
+        "id": "203f16c5152940f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2bfa61a7139a0e75",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "2f6fec01243cecbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "aad16b6855841648",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 410.5
+  },
+  "right": {
+    "id": "7e7541907a3de8a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "118c65e7c8528b6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5adf2bf44e65381",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a Lezione 5 - Cablaggio e Tecnologie di Trasmissione"
+            }
+          },
+          {
+            "id": "976748b2bf8ed83e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Lezione 5 - Cablaggio e Tecnologie di Trasmissione"
+            }
+          },
+          {
+            "id": "40b0f1cda67edefc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "a51b5d413468b30a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
+          },
+          {
+            "id": "b427c2e4d70d6c9c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di Lezione 5 - Cablaggio e Tecnologie di Trasmissione"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false,
+      "omnisearch:Omnisearch": false
+    }
+  },
+  "active": "ec37a87f4578d50b",
+  "lastOpenFiles": [
+    "Datacenter Design and Operation/Lezione 4 - Cooling and Cabling.md",
+    "Datacenter Design and Operation/Lezione 3 - Power and Cooling.md",
+    "Datacenter Design and Operation/Lezione 8 - Switch e Fabric continua.md",
+    "Datacenter Design and Operation/Lezione 7 - Switching.md",
+    "Datacenter Design and Operation/Lezione 6 - Fabric di un Datacenter.md",
+    "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+    "Datacenter Design and Operation/Lezione 2 - Architettura e Gestione Datacenter.md",
+    "Datacenter Design and Operation/Lezione 1 - Introduzione.md",
+    "Peer to Peer Systems and Blockchain/Lezione 2 - Classificazione Overlay.md",
+    "Peer to Peer Systems and Blockchain/Lezione 1 - Introduzione corso.md",
+    "Peer to Peer Systems and Blockchain/Lezione 5 - Crittografia.md",
+    "Peer to Peer Systems and Blockchain/Lezione 6 - Strutture Dati per DHT e Blockchain.md",
+    "Peer to Peer Systems and Blockchain/Lezione 7 - Introduzione alla Blockchain.md",
+    "Mobile and Cyber-Physical Systems/Lezione 10 - (Lab) Mobile networks.md",
+    "Mobile and Cyber-Physical Systems/Lezione 6 - (Lab) Protocolli MAC e Reti Wireless.md",
+    "Mobile and Cyber-Physical Systems/Lezione 8 - MQTT Part 2.md",
+    "Peer to Peer Systems and Blockchain/Lezione 3 - Retrieving Content e DHT.md",
+    "Peer to Peer Systems and Blockchain/Lezione 4 - Kademlia.md",
+    "Peer to Peer Systems and Blockchain/Lezione 8 - Bitcoin.md",
+    "Peer to Peer Systems and Blockchain/Lezione 9 - Bitcoin Maining.md",
+    "Peer to Peer Systems and Blockchain/Lezione 10 - Bitcoin security.md",
+    "Peer to Peer Systems and Blockchain/Lezione 11 - Advanced Bitcoin Scripts.md",
+    "Peer to Peer Systems and Blockchain/Lezione 12 - Lightning network of Bitcoin.md",
+    "ICT Startup Building/Lezione 5.md",
+    "ICT Startup Building/Senza nome.md",
+    "Mobile and Cyber-Physical Systems/Lezione 7 - (Lab) Mobile Networks.md"
+  ]
+}

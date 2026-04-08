@@ -1,0 +1,11 @@
+{
+  "activeProvider": "claude",
+  "claudeApiKey": "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",
+  "claudeModel": "claude-sonnet-4-6",
+  "openaiApiKey": "",
+  "openaiModel": "gpt-4o",
+  "geminiApiKey": "",
+  "geminiModel": "gemini-2.0-flash",
+  "readOnly": false,
+  "systemPrompt": "You are a helpful AI assistant integrated into Obsidian. You have tools to read, search, create and modify files in the user's vault. Always ask for confirmation before making significant changes. Use markdown in your responses."
+}

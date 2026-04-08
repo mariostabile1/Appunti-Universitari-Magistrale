@@ -1,0 +1,263 @@
+{
+  "main": {
+    "id": "d9472987c82dbb6b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac225936df30df75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4eade1ba09fd9ffc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mobile and Cyber-Physical Systems/Lezione 3 - Interoperabilità e Standard.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lezione 3 - Interoperabilità e Standard"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88ced849d0b52f14",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fb3cfa6e8358bf6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a2d5d62ec55bcf1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "2b977e0a8247f2d7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "2ab20788d5137770",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          },
+          {
+            "id": "1724a16b341fe2e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSH and CheatSheet/Comandi SSH Comodi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Comandi SSH Comodi"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 407.5
+  },
+  "right": {
+    "id": "f940e27e0b003e78",
+    "type": "split",
+    "children": [
+      {
+        "id": "602648172e0d1728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8db0717f6439f73b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Mobile and Cyber-Physical Systems/Lezione 13 - ZigBee Security.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a Lezione 13 - ZigBee Security"
+            }
+          },
+          {
+            "id": "6940137d5d8cb246",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Information Retrieval/Information Retrieval Book.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Information Retrieval Book"
+            }
+          },
+          {
+            "id": "635179e3dec6c4d7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "cb486f88f3b5ab49",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
+          },
+          {
+            "id": "fabff5e886e0ad3b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Information Retrieval/Information Retrieval Book.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di Information Retrieval Book"
+            }
+          },
+          {
+            "id": "def41b9a82f5a794",
+            "type": "leaf",
+            "state": {
+              "type": "ai-agent-chat-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "ai-agent-chat-view"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 371.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Crea nuova Base": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "omnisearch:Omnisearch": false
+    }
+  },
+  "active": "4eade1ba09fd9ffc",
+  "lastOpenFiles": [
+    "Mobile and Cyber-Physical Systems/Lezione 2 - Piattaforme IoT.md",
+    "Mobile and Cyber-Physical Systems/Lezione 1 - Introduzione ai CPS e IoT.md",
+    "Peer to Peer Systems and Blockchain/Lezione 1 - Introduzione corso.md",
+    "Peer to Peer Systems and Blockchain/Lezione 12 - Lightning network of Bitcoin.md",
+    "Peer to Peer Systems and Blockchain/Lezione 11 - Advanced Bitcoin Scripts.md",
+    "Peer to Peer Systems and Blockchain/Lezione 10 - Bitcoin security.md",
+    "Peer to Peer Systems and Blockchain/Lezione 9 - Bitcoin Maining.md",
+    "Peer to Peer Systems and Blockchain/Lezione 7 - Introduzione alla Blockchain.md",
+    "Peer to Peer Systems and Blockchain/Lezione 6 - Strutture Dati per DHT e Blockchain.md",
+    "Peer to Peer Systems and Blockchain/Lezione 5 - Crittografia.md",
+    "Peer to Peer Systems and Blockchain/Lezione 4 - Kademlia.md",
+    "Peer to Peer Systems and Blockchain/Lezione 2 - Classificazione Overlay.md",
+    "Datacenter Design and Operation/Lezione 6 - Fabric di un Datacenter.md",
+    "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md",
+    "Datacenter Design and Operation/Lezione 4 - Cooling and Cabling.md",
+    "Datacenter Design and Operation/Lezione 3 - Power and Cooling.md",
+    "Datacenter Design and Operation/Lezione 2 - Architettura e Gestione Datacenter.md",
+    "Datacenter Design and Operation/Lezione 1 - Introduzione.md",
+    "Datacenter Design and Operation/Lezione 8 - Switch e Fabric continua.md",
+    "Datacenter Design and Operation/Lezione 7 - Switching.md",
+    "Datacenter Design and Operation/Lezione 5 - Cablaggio e Tecnologie di Trasmissione.md.tmp.6980.1774630375371",
+    "Datacenter Design and Operation/Lezione 4 - Cooling and Cabling DA RIFARE.md.tmp.6980.1774630299394",
+    "Peer to Peer Systems and Blockchain/Lezione 3 - Retrieving Content e DHT.md",
+    "CLAUDE.md",
+    "Mobile and Cyber-Physical Systems/Lezione 14 - IoT Design.md",
+    "Mobile and Cyber-Physical Systems/Lezione 13 - ZigBee Security.md",
+    "Mobile and Cyber-Physical Systems/Lezione 12 - Application Layer of ZigBee.md",
+    "Mobile and Cyber-Physical Systems/Lezione 15 - (Lab) SDN Architecture.md",
+    "Senza nome.base",
+    "Senza nome 1.base",
+    "Images and Documents/Pasted image 20260309145512.png",
+    "Images and Documents/Pasted image 20260313143711.png",
+    "Images and Documents/Pasted image 20260313143813.png",
+    "Images and Documents/Pasted image 20260313145859.png",
+    "Images and Documents/Pasted image 20260317144430.png",
+    "Images and Documents/Pasted image 20260317150017.png",
+    "Images and Documents/Pasted image 20260319164820.png",
+    "Images and Documents/Screenshot 2026-03-10 alle 14.37.18.png",
+    "Images and Documents/Screenshot 2026-03-04 alle 10.47.58.png",
+    "Images and Documents/Screenshot 2026-03-04 alle 10.32.29.png",
+    "Images and Documents/files",
+    "Images and Documents/files.zip",
+    "ICT Startup Building",
+    "Images and Documents",
+    "SSH and CheatSheet",
+    "Datacenter Design and Operation",
+    "Lavagna Argomenti.canvas"
+  ]
+}

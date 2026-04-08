@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1767546341817,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 13 - Approximate Nearest Neighbor.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 1 - Introduzione.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 2 - Valutazione dei Sistemi di IR.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 3 - Proprietà del Linguaggio Naturale e Text Processing.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 4 - Rappresentazione del Testo e Modello Booleano.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 5 - Ponderazione e BM25.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 6 - Inverted Index e Query Processing.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 7 - Query Processing Avanzato Top-k.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 8 - Data Compression.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 9 - Learning to Rank I.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 10 - Learning to Rank II.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 11 - Training e Inferenza di Alberi.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1767546331359,
+          "path": "1 Semestre 1 Anno/Information Retrieval/Lezioni/Lezione 12 - Neural Information Retrieval.md"
+        }
+      ],
+      "title": "Libro Information Retrieval"
+    }
+  ]
+}

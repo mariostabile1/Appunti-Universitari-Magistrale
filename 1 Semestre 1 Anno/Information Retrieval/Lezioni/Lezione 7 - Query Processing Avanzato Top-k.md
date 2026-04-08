@@ -1,0 +1,26 @@
+## <font color="#244061">Lezione 7: Query Processing Avanzato (Top-k)</font>
+
+### <font color="#5f497a">Exact Top-k Retrieval e Min-Heap</font>
+
+Nel contesto dell'Information Retrieval, l'obiettivo primario non è valutare ogni singolo documento della collezione, ma identificare rapidamente i $k$ documenti più rilevanti per una data query (Top-k Retrieval). Quando si richiede un recupero "Exact" (esatto), il sistema garantisce di restituire i veri $k$ documenti con il punteggio più alto, senza approssimazioni, ma cercando di evitare il calcolo completo del punteggio per tutti i documenti candidati.
+
+Per gestire efficientemente l'insieme dei risultati correnti durante la scansione dell'indice, si utilizza una struttura dati **Min-Heap** di dimensione $k$. Il Min-Heap mantiene i $k$ migliori documenti trovati fino a quel momento. La proprietà fondamentale è che la radice dell'albero contiene il documento con il punteggio più basso tra quelli attuali (il $k$-esimo miglior documento). Questo valore alla radice funge da soglia (threshold) dinamica $\theta$: un nuovo documento candidato viene inserito nel heap (e valutato completamente) solo se il suo punteggio stimato o parziale supera $\theta$. Se il candidato entra nel heap, il precedente minimo viene espulso e la soglia $\theta$ viene aggiornata (aumentata), rendendo il criterio di selezione progressivamente più stringente.
+### <font color="#5f497a">Potatura Dinamica (Dynamic Pruning) e Upper Bound (UB)</font>
+
+La potatura dinamica è una tecnica volta a ridurre il costo computazionale saltando la valutazione di documenti che non hanno alcuna possibilità di entrare nel top-$k$. Il principio si basa sul confronto tra la soglia corrente $\theta$ del Min-Heap e un **Upper Bound (UB)** del punteggio che un documento candidato potrebbe potenzialmente raggiungere.
+
+Per ogni termine $t$ del dizionario, si pre-calcola un valore $UB_t$ che rappresenta il massimo contributo di punteggio che quel termine può dare a un qualsiasi documento della collezione (spesso coincidente con il massimo peso $w_{t,d}$ registrato nella posting list). Durante il processing della query, se si determina che il punteggio massimo raggiungibile da un documento (sommando gli $UB$ dei termini rimanenti o presenti) è inferiore a $\theta$, il documento viene scartato ("potato") senza calcolarne il punteggio esatto.
+### <font color="#5f497a">Algoritmi MaxScore e WAND (Weak AND)</font>
+
+Due degli algoritmi più efficaci per implementare la potatura dinamica utilizzando la strategia DAAT (Document-at-a-time) sono MaxScore e WAND.
+
+L'algoritmo **MaxScore** ordina i termini della query in base al loro $UB_t$ crescente. Divide i termini in due gruppi: quelli con $UB$ basso (spesso non essenziali) e quelli con $UB$ alto. Durante la valutazione di un documento, MaxScore calcola prima il punteggio parziale basato sui termini ad alto $UB$. Se questo parziale, sommato al massimo punteggio possibile dei termini rimanenti (quelli a basso $UB$ non ancora controllati), non supera $\theta$, il calcolo si interrompe e il documento viene scartato. Questo permette di evitare letture costose sulle liste dei termini meno discriminanti.
+
+L'algoritmo **WAND (Weak AND)** utilizza un approccio basato su iteratori. Per ogni termine della query esiste un iteratore sulla posting list. WAND seleziona un "pivot" tra gli iteratori e verifica se la somma degli $UB$ dei termini che precedono il pivot è sufficiente a superare $\theta$. Se la condizione non è soddisfatta ("threshold check"), l'algoritmo deduce che nessun documento nell'intervallo corrente può entrare nel top-$k$ e fa avanzare gli iteratori utilizzando l'operazione `nextGEQ`, saltando intere porzioni di posting lists. WAND è particolarmente efficiente per query lunghe o disgiuntive (OR), agendo come un filtro che promuove solo i documenti che contengono una "coincidenza sufficiente" di termini pesanti.
+### <font color="#5f497a">Blocking e Summaries: Block-max WAND e Block-max MaxScore</font>
+
+Gli algoritmi MaxScore e WAND classici utilizzano un unico $UB_t$ globale per l'intera posting list. Tuttavia, questo approccio può essere inefficiente se un termine ha un peso molto alto in un solo documento ma basso in tutti gli altri: l'$UB$ globale sarà alto, impedendo la potatura anche nelle zone della lista dove il termine è poco rilevante.
+
+Per raffinare la stima, si introducono tecniche di **Blocking**. Le posting lists vengono divise in blocchi (di dimensione fissa o variabile) e per ciascun blocco si memorizza un sommario che include il massimo punteggio del termine _all'interno di quel blocco specifico_ ($UB_{t, block}$).
+
+Questa granularità permette di definire varianti ottimizzate come **Block-max WAND (BMW)** e **Block-max MaxScore**. Questi algoritmi possono saltare interi blocchi di documenti se l'$UB$ locale del blocco non è sufficiente a superare la soglia $\theta$, garantendo una potatura molto più aggressiva e performante rispetto alle versioni basate su $UB$ globali. L'overhead aggiuntivo per memorizzare i massimi dei blocchi è compensato dalla drastica riduzione dei calcoli di similarità e delle decodifiche dei dati compressi.

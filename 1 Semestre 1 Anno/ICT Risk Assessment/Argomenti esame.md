@@ -1,0 +1,28 @@
+- [x] Politica di sicurezza Confidenzialità Integrità Disponibilità
+- [x] Ecosistema Externalities Proprietà non funzionali Inventario delle risorse e degli asset Definizione della politica di sicurezza
+- [x] Default allow e default deny DAC vs MAC Lattice di sicurezza Politiche MAC per confidenzialità ed integrità Trusted Computing Base
+- [x] Attacchi, intrusioni exposure definizione e proprietà
+- [x] Intrusioni, exposure, analisi e gestione del rischio informatico
+- [x] Stack overflow Denial of service Definizione, contromisure e loro costo
+- [x] Vulnerability discovery and scanning Distinct kind of scanning
+- [ ] Fuzzing: strategies and evaluation Fuzzing coverage
+- [ ] Fuzzing maturity model Attack properties and attributes Local/Remote attacks
+- [ ] Classificazione di attacchi Esempi di attacchi contro sistemi web: SQL inijection Attacchi alla crittografia Patching di vulnerabilità
+- [ ] Scheduling di patching Scoring Systems CVSS ESP Cisa decision tree
+- [x] Robustezza e Resilienza Sistema minimo Tipi di Ridondanza Eterogeneità Autenticazione Autenticazione Biometrica
+- [x] Kerberos Protocollo Autenticazione Controllo degli accessi
+- [ ] Zero trust architecture, Control Plane, Data Plane Reference Monitor Capability
+- [x] Access control list ACL in router ACL in Linux Role-based access control Attribute-based access control
+- [ ] Microsoft Access TOken System honeypot: difesa di un sistema e raccolta informazioni di threat intelligence
+- [x] Programmazione robusta Regole di programmazione e errori da evitare
+- [ ] Segmantazione e firewall Firewall: parametri di progetto e conseguenti ricadute su firewall Esempi di architetture e di controlli
+- [x] Segmentation: DMZ Architetture con DMZ Segmentation: Honeypot Personal firewall, microsegmentazione
+- [x] North-Sud vs East-West traffic VPN IPSEC I vari protocolli che lo compongono AH e ESP mode
+- [x] IPSEC Transport vs Tunnel Mode Criteri per la scelta degli algoritmi di encryption ARM Trust Zone per IoT Implementazione
+- [x] Intel SGX extension Enclave: definizione ed uso Enclave: implementazione e supporto hw Attestazione locale e remota di enclave Introduzione ad Intrusion Detection
+- [x] network intrusion detection systems
+- [x] Polymorphic worms and code obfuscation
+- [x] Sandboxes, Code Obfuscation, Yara Rules
+- [x] MITRE Att&ck
+- [x] Deep packet Inspection, traffic fingerprinting for cyber traffic analysis
+- [x] IoT (Internet of Things) and OT (Operation Technology)
