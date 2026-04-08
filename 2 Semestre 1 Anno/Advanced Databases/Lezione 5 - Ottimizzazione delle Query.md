@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "5 - Ottimizzazione delle Query"
 professore: ""
 ---
-
 # Ottimizzazione delle Query
 
 L'**ottimizzatore** è una componente chiave del Query Manager. Il suo ruolo è selezionare il piano fisico ottimale per eseguire le query usando gli operatori e le strutture dati forniti dallo Storage Engine. Le **dipendenze funzionali** vengono usate non solo per la progettazione dello schema relazionale, ma anche per l'ottimizzazione.

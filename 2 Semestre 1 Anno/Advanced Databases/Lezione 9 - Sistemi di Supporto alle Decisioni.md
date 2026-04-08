@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "9 - Sistemi di Supporto alle Decisioni"
 professore: ""
 ---
-
 # Sistemi di Supporto alle Decisioni
 
 I **sistemi di supporto alle decisioni** (*Decision Support Systems*, DSS) sono un tipo di sistema informativo. Un **sistema informativo** è una raccolta organizzata di risorse, persone e procedure finalizzate a raccogliere, memorizzare, elaborare e comunicare informazioni necessarie a supportare le attività in corso. Le informazioni possono essere rappresentate come immagini, testo, audio o qualsiasi tipo di dato.

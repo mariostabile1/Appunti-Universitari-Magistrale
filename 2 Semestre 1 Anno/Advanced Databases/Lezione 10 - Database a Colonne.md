@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "10 - Database a Colonne"
 professore: ""
 ---
-
 # Database a Colonne
 
 I **sistemi orientati alle colonne** (*column-stores*) sono un tipo di DBMS che memorizza i dati per colonna invece che per riga. Memorizzando separatamente ogni colonna su disco, le query possono leggere solo gli attributi necessari senza dover leggere intere righe e poi scartare ciò che non serve. Questo è particolarmente vantaggioso anche perché i piani fisici possono essere eseguiti **un blocco alla volta** (*vectorized execution*) invece che una tupla alla volta, caricando più record contemporaneamente per ogni operatore. Quando si considera la compressione, le colonne sono anche più facilmente comprimibili delle righe.

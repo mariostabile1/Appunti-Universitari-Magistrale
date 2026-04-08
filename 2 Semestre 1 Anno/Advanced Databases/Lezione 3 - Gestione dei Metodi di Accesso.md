@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "3 - Gestione dei Metodi di Accesso"
 professore: ""
 ---
-
 # Gestione dei Metodi di Accesso
 
 L'**Access Methods Manager** fornisce un'interfaccia con diverse operazioni per interagire con le organizzazioni e gli indici implementati dallo Storage Structure Manager, così che i dati possano essere trasferiti tra la memoria principale e quella permanente. Il linguaggio usato per implementare queste operazioni trasforma la macchina in una **macchina database astratta** (*abstract database machine*), il cuore del sistema di gestione di database.

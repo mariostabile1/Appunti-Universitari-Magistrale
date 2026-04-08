@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "11 - Database Paralleli e Distribuiti"
 professore: ""
 ---
-
 # Database Paralleli e Distribuiti
 
 Un **sistema parallelo** è un sistema che consente l'elaborazione parallela delle operazioni. Un **sistema distribuito** è composto da più macchine che lavorano insieme per raggiungere lo stesso obiettivo. I database possono essere ospitati su singole macchine (che possono anche essere sistemi paralleli) o distribuiti su diversi componenti di un'architettura distribuita. Un caso estremo di architettura distribuita è rappresentato dalle reti **peer-to-peer**: una collezione di macchine indipendenti senza alcun indice centralizzato che indica quale porzione dei dati si trova dove.

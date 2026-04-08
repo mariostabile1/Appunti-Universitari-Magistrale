@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "12 - Big Data e NoSQL"
 professore: ""
 ---
-
 # Big Data e NoSQL
 
 Dalla loro creazione negli anni '80 fino ai primi anni 2000, i DBMS relazionali sono stati il tipo principale di sistemi usati per gestire i dati. Ma a metà degli anni 2000, l'ascesa di Internet ha causato un rapido aumento della quantità di dati generati dalle attività online. È nato un nuovo insieme di campi applicativi chiamato **Big Data**, e le capacità dei DBMS relazionali tradizionali si sono rivelate insufficienti. Le limitazioni dei database relazionali sono descritte dalle **"tre V"**:

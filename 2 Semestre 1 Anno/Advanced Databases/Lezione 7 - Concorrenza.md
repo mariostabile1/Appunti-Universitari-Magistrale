@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "7 - Concorrenza"
 professore: ""
 ---
-
 # Concorrenza
 
 Quando le transazioni vengono eseguite concorrentemente, le loro operazioni sono spesso **interleaved** (interlacciate), cioè l'esecuzione delle operazioni di una transazione si alterna con quella di un'altra. Questo può causare interferenze che lasciano il sistema in uno stato inconsistente. È responsabilità del **Concurrency Manager** prevenire questo. Si assume che tutte le transazioni siano consistenti: se una transazione venisse eseguita in isolamento non violerebbe alcun vincolo. Esistono tre tipi di conflitti possibili durante l'esecuzione concorrente:

@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "4 - Operatori Fisici Relazionali"
 professore: ""
 ---
-
 # Operatori Fisici Relazionali
 
 Una delle componenti più importanti di un DBMS è il **Query Manager**, responsabile di pianificare le query e dirigerle alle tabelle corrette. Una parte del Query Manager è il **Query Optimizer**, che ha il compito di determinare come eseguire una query nel modo più efficiente possibile, considerando i parametri fisici, l'organizzazione dei dati e la presenza o assenza di indici.

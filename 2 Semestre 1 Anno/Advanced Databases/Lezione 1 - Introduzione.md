@@ -7,7 +7,6 @@ data: 2024-01-01
 lezione: "1 - Introduzione"
 professore: ""
 ---
-
 # Introduzione
 
 L'uso più comune delle tecnologie informatiche è memorizzare e recuperare dati, che si tratti di testo, immagini, video o file audio. Con l'aumento della quantità di dati generati da diversi processi nel tempo, i sistemi di archiviazione devono evolversi per garantire un accesso affidabile ai dati, nonché un recupero rapido ed efficiente. I dati vengono tipicamente memorizzati in **database** (DB), conservati nella **memoria permanente**.

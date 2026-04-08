@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "8 - Progettazione Fisica del Database"
 professore: ""
 ---
-
 # Progettazione Fisica del Database
 
 La progettazione di un database relazionale si articola in quattro fasi:

@@ -8,7 +8,6 @@ data: 2024-01-01
 lezione: "6 - Transazioni"
 professore: ""
 ---
-
 # Transazioni
 
 Lo Storage Engine offre funzionalità volte a risolvere i problemi di **recovery** e **concorrenza**, garantendo che ogni operazione dell'utente sia eseguita senza che quest'ultimo noti alcun guasto sottostante, e che non vi siano interferenze con altre operazioni eseguite concorrentemente. Le soluzioni a questi problemi si basano su un meccanismo chiamato **transazione**.

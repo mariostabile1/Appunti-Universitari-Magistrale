@@ -10,7 +10,6 @@ data: 2024-01-01
 lezione: "2 - Panoramica di un DBMS"
 professore: ""
 ---
-
 # Panoramica di un DBMS
 
 Questo capitolo fornisce una panoramica generale della struttura di un DBMS (Data Base Management System) centralizzato basato sul modello relazionale, descrivendo i suoi componenti e le rispettive funzionalità.
