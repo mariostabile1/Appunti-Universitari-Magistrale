@@ -40,4 +40,3 @@ _(Nota: Questi comandi vanno eseguiti dentro la cartella dove si trova il file `
 | `docker compose logs -f`       | Mostra i log combinati di tutti i servizi del progetto in tempo reale.         |
 
 ---
-GalimbertiCoinqui0103!
