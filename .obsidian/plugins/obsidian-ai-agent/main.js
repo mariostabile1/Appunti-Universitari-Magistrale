@@ -1,1 +1,0 @@
-/Users/fabiopsh/Documents/Progetti Università Magistrale/obsidian-ai-agent/main.js
