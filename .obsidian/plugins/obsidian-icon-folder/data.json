@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiAsteriskSquare",
-      "LiForkKnife",
-      "LiServerCog",
-      "LiActivity",
-      "2️⃣"
+      "LiArrowBigUpDash",
+      "LiSeparatorVertical",
+      "LiColumns3cog",
+      "LiSquareBottomDashedScissors",
+      "LiProjector"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -76,5 +76,17 @@
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 13 - Hard and Soft Forks in Bitcoin.md": "LiForkKnife",
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 17 - MAC Protocols.md": "LiAsteriskSquare",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 9 - Bitcoin Mining.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 18 - The IEEE 802.15.4 Standard.md": "LiServerCog"
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 18 - The IEEE 802.15.4 Standard.md": "LiServerCog",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 1 - Introduzione.md": "LiInfo",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 2 - Panoramica di un DBMS.md": "LiDatabase",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 3 - Gestione dei Metodi di Accesso.md": "LiAArrowUp",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 4 - Operatori Fisici Relazionali.md": "LiOrbit",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 5 - Ottimizzazione delle Query.md": "LiMessageSquareReply",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 6 - Transazioni.md": "LiGitBranchPlus",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 7 - Concorrenza.md": "LiPictureInPicture",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 8 - Progettazione Fisica del Database.md": "LiProjector",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 9 - Sistemi di Supporto alle Decisioni.md": "LiSquareBottomDashedScissors",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 10 - Database a Colonne.md": "LiColumns3cog",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 11 - Database Paralleli e Distribuiti.md": "LiSeparatorVertical",
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 12 - Big Data e NoSQL.md": "LiArrowBigUpDash"
 }
