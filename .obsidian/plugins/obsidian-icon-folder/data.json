@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiArrowBigUpDash",
-      "LiSeparatorVertical",
-      "LiColumns3cog",
-      "LiSquareBottomDashedScissors",
-      "LiProjector"
+      "LiBitcoin",
+      "LiMapPin",
+      "LiRocket",
+      "LiDatabase",
+      "LiHardDriveUpload"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -88,5 +88,12 @@
   "2 Semestre 1 Anno/Advanced Databases/Lezione 9 - Sistemi di Supporto alle Decisioni.md": "LiSquareBottomDashedScissors",
   "2 Semestre 1 Anno/Advanced Databases/Lezione 10 - Database a Colonne.md": "LiColumns3cog",
   "2 Semestre 1 Anno/Advanced Databases/Lezione 11 - Database Paralleli e Distribuiti.md": "LiSeparatorVertical",
-  "2 Semestre 1 Anno/Advanced Databases/Lezione 12 - Big Data e NoSQL.md": "LiArrowBigUpDash"
+  "2 Semestre 1 Anno/Advanced Databases/Lezione 12 - Big Data e NoSQL.md": "LiArrowBigUpDash",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 14 - Ethereum Accounts Transactions Gas.md": "LiEthernetPort",
+  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 9 - Fabric Avanzato e Storage.md": "LiHardDriveUpload",
+  "2 Semestre 1 Anno/Datacenter Design and Operation": "LiDatabase",
+  "2 Semestre 1 Anno/Advanced Databases": "LiEthernetPort",
+  "2 Semestre 1 Anno/ICT Startup Building": "LiRocket",
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems": "LiMapPin",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain": "LiBitcoin"
 }

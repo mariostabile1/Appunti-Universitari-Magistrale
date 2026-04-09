@@ -1,14 +1,3 @@
----
-tags:
-  - università/datacenter-design-and-operation
-  - fabric
-  - infiniband
-  - storage
-  - rdma
-data: 2026-04-09
-lezione: "Lezione 9 — Fabric avanzato e introduzione allo storage"
-professore: "Antonio Cisternino"
----
 
 # Fabric Avanzato e Introduzione allo Storage
 
