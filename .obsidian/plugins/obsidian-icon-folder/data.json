@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiEgg",
       "LiArchiveRestore",
       "LiBitcoin",
       "LiMapPin",
-      "LiRocket",
-      "LiDatabase"
+      "LiRocket"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -96,5 +96,6 @@
   "2 Semestre 1 Anno/ICT Startup Building": "LiRocket",
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems": "LiMapPin",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain": "LiBitcoin",
-  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 10 - Storage Tecnologie e Principi.md": "LiArchiveRestore"
+  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 10 - Storage Tecnologie e Principi.md": "LiArchiveRestore",
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 19 - Caso studio Tartarughe.md": "LiEgg"
 }
