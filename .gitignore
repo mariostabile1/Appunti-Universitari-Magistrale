@@ -10,10 +10,8 @@
 .obsidian/workspace*.json
 .obsidian/workspace *.json
 
-# Obsidian - plugin binaries (auto-downloaded, not user data)
-.obsidian/plugins/*/main.js
-.obsidian/plugins/*/styles.css
-.obsidian/plugins/*/manifest.json
+# Obsidian - plugin binaries for obsidian-pandoc (external dependency, not bundled)
+# (tutti gli altri plugin sono tracciati inclusi main.js, manifest.json, styles.css)
 
 # Obsidian - cache
 .obsidian/cache
