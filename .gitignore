@@ -15,12 +15,9 @@
 .obsidian/plugins/*/styles.css
 .obsidian/plugins/*/manifest.json
 
-# Obsidian - themes (auto-downloaded)
-.obsidian/themes/
 
 # Obsidian - cache and icons
 .obsidian/cache
-.obsidian/icons/
 
 # Trash
 .trash/
