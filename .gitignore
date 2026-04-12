@@ -15,17 +15,11 @@
 .obsidian/plugins/*/styles.css
 .obsidian/plugins/*/manifest.json
 
-# Obsidian - themes (auto-downloaded)
-.obsidian/themes/
-
-# Obsidian - cache and icons
+# Obsidian - cache
 .obsidian/cache
-.obsidian/icons/
 
 # Trash
 .trash/
 
 # Claude
 .claude/
-
-/.obsidian/plugins/obsidian-icon-folder/data.json
