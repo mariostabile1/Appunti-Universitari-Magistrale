@@ -9,13 +9,6 @@ data: 2026-04-14
 lezione: "Lab 6 - Solidity"
 professore: "Damiano Di Francesco Maesa"
 ---
-
-# Lab 6 — Solidity
-
-Questa lezione di laboratorio introduce **Solidity**, il linguaggio di programmazione ad alto livello per smart contract su Ethereum. Prima di entrare nel linguaggio, si ripassa il modello degli account di Ethereum e la struttura dello stato — elementi indispensabili per capire cosa fa davvero un contratto quando viene eseguito.
-
----
-
 ## Ethereum: ripasso del modello degli account
 
 ### Il modello account vs UTXO
