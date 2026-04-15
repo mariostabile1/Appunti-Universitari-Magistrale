@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlbum",
       "LiCode2",
       "LiEgg",
       "LiArchiveRestore",
-      "LiBitcoin",
-      "LiMapPin"
+      "LiBitcoin"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -101,5 +101,6 @@
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 20 - (Lab) Network Function Virtualization.md": "LiRocket",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 15 - (Lab) Solidity.md": "LiCode2",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 16 - (Lab) Solidity Avanzato.md": "LiCode2",
-  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 21 - (Lab) Network Emulator con ComNetsEmu.md": "LiCode2"
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 21 - (Lab) Network Emulator con ComNetsEmu.md": "LiCode2",
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 22 - (Lab) Multi-Access Edge Computing MEC.md": "LiAlbum"
 }

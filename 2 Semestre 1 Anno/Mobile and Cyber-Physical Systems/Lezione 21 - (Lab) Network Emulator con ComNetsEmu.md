@@ -411,6 +411,9 @@ docker exec -it <container_id> bash
 
 # Cattura il traffico TCP
 tcpdump tcp
+
+#Comando d'oro per cancellare pod e pulire la memoria e rifar partire topology
+  sudo mn -c && sudo docker rm -f $(sudo docker ps -aq) && sudo python3 topology.py
 ```
 
 ---
