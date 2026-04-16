@@ -33,6 +33,9 @@ L'interfaccia dominante per gli HDD è stata per anni **SATA** (*Serial ATA*), n
 >
 > I drive meccanici moderni raggiungono capacità di **30–36 TB** (Samsung, Seagate, Western Digital, 2024). Questo progresso riflette esclusivamente l'uso come *cold storage*: la densità è massimizzata perché il throughput non è critico.
 
+![Interno di un Hard Disk Drive: piatti magnetici e testine di lettura/scrittura](https://upload.wikimedia.org/wikipedia/commons/3/38/Seagate_ST33232A_hard_disk_inner_view.jpg)
+*Fig. — Anatomia interna di un HDD Seagate: i piatti magnetici rotanti e il braccio con le testine rendono visibile il vincolo meccanico che limita la latenza a 3–5 ms.*
+
 ---
 
 ### La transizione all'SSD: 30x in un solo salto
@@ -60,6 +63,9 @@ L'effetto sul collo di bottiglia fu immediato:
 | SSD NVMe Gen 3 (2016+) | 20–100 µs | ~3,5 GB/s |
 | SSD NVMe Gen 4 (2019+) | 10–50 µs | ~7 GB/s |
 | SSD NVMe Gen 5 (2022+) | 5–20 µs | 10–14 GB/s |
+
+![SSD NVMe M.2 2280 da 1 TB](https://upload.wikimedia.org/wikipedia/commons/e/ed/1TB_2280_NVME_SSD.jpg)
+*Fig. — Un SSD NVMe in formato M.2 2280: la connessione diretta al bus PCIe elimina il controller SATA e porta la bandwidth a oltre 7 GB/s.*
 
 > [!tip] Il controller come collo di bottiglia
 >

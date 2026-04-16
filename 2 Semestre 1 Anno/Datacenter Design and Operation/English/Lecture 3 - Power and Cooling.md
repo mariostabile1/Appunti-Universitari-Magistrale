@@ -110,6 +110,9 @@ Since water is a significantly superior thermal conductor to air — which in fa
 
 The underlying physical principle is **convection**: warm air naturally tends to rise. The operating cycle is as follows: the CRAC machine draws warm air from the upper part of the room, generates cold air and forces it below the floating floor. The cold air travels in the underlying *plenum* and rises only through the perforated tiles placed in front of the racks. It is then drawn in by the front fans of the servers, cools them, and exits as warm air at the rear, rising towards the ceiling to begin the cycle again.
 
+![Lifting a tile from the raised floor (floating floor) of a data center](https://commons.wikimedia.org/wiki/Special:FilePath/Tile-lifter-in-use-raised-floor.jpg)
+*Fig. — The raised floor is the structural feature that makes the CRAC system possible: the underlying plenum distributes cold air towards the perforated tiles positioned in front of the racks.*
+
 > [!tip] The golden rule of CRAC
 >
 > **Never mix hot air with cold air.** Mixing the two flows would nullify the thermodynamic work spent generating the cooling, drastically lowering efficiency. In some specialised DCs such as those of Aruba, racks have a front glass blast-proof door with ventilation grilles positioned *inside* — between the glass and the servers — to channel the cold flow directly into the IT without dispersal.

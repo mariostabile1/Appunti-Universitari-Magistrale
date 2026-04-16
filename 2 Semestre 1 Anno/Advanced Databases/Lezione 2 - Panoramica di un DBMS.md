@@ -47,9 +47,25 @@ L'architettura di un DBMS comprende le seguenti componenti di base:
 
 Nei sistemi reali, le funzionalità di questi moduli non sono completamente separate in componenti distinti, ma questa panoramica aiuta a comprendere lo scopo di ciascuno.
 
-> [!note] Dove inserire l'immagine
->
-> **[IMMAGINE - Fig. 2.1]**: L'architettura di un DBMS — diagramma a blocchi che mostra Storage Engine e Relational Engine con i loro moduli.
+```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true}}}%%
+flowchart TB
+    subgraph RE["Relational Engine"]
+        DDL["Data Definition Language"]
+        QM["Query Manager"]
+        CAT["Catalog Manager"]
+    end
+    subgraph SE["Storage Engine"]
+        PMM["Permanent Memory Manager"]
+        BM["Buffer Manager"]
+        SSM["Storage Structures Manager"]
+        AMM["Access Methods Manager"]
+        TRM["Transaction & Recovery Manager"]
+        CM["Concurrency Manager"]
+    end
+    RE --> SE
+```
+*Fig. 2.1 — Architettura di un DBMS: il Relational Engine gestisce query e schema, delegando le operazioni fisiche allo Storage Engine.*
 
 ### Permanent Memory Manager (PMM)
 
@@ -61,9 +77,23 @@ Una volta che una pagina fisica viene trasferita in memoria principale, è chiam
 
 Il **Buffer Manager** è responsabile del trasferimento di pagine tra la memoria temporanea e quella permanente, minimizzando il numero di accessi al disco. Le prestazioni delle operazioni su un database dipendono dal numero di pagine trasferite in memoria temporanea.
 
-> [!note] Dove inserire l'immagine
->
-> **[IMMAGINE - Fig. 2.2]**: I componenti del Buffer Manager — mostra il buffer pool, la resident pages table e il meccanismo di pin count.
+```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true}}}%%
+flowchart TD
+    DISK[("Disco\nMemoria Permanente")]
+    subgraph BM["Buffer Manager"]
+        subgraph POOL["Buffer Pool (array di frame)"]
+            FR["Pagina  |  Pin Count  |  Dirty"]
+        end
+        RPT["Resident Pages Table\nPID → Frame ID"]
+    end
+    TXN(["Transazione"])
+    DISK <-->|"Page In / Page Out"| POOL
+    TXN -->|"fix(PID)"| RPT
+    RPT -->|"frame ID"| POOL
+    TXN <-->|"unfix / setDirty"| POOL
+```
+*Fig. 2.2 — Componenti del Buffer Manager: la Resident Pages Table mappa i PID ai frame, ogni frame tiene traccia del pin count e del dirty bit.*
 
 Il **buffer pool** è un array di frame, ognuno contenente una copia di una pagina in memoria permanente più informazioni bookkeeping. Il pool ha dimensione fissa; quando non ci sono frame liberi, una pagina deve essere liberata con un algoritmo appropriato. Ogni frame memorizza due variabili:
 
@@ -203,7 +233,29 @@ $$\log_m(N+1) \leq h \leq \log_{\lceil m/2 \rceil}\left(\frac{N+1}{2}\right) + 1
 > [!note] Dove inserire l'immagine
 >
 > **[IMMAGINE - Fig. 2.3]**: Un albero binario paginato — ogni pagina contiene 8 nodi.
-> **[IMMAGINE - Fig. 2.4]**: Esempio di B-tree.
+
+```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true}}}%%
+flowchart TD
+    R["30"]
+    N1["10 | 20"]
+    N2["40 | 50"]
+    L1["3 | 7"]
+    L2["12 | 17"]
+    L3["23 | 27"]
+    L4["33 | 37"]
+    L5["43 | 47"]
+    L6["53 | 57"]
+    R --> N1
+    R --> N2
+    N1 --> L1
+    N1 --> L2
+    N1 --> L3
+    N2 --> L4
+    N2 --> L5
+    N2 --> L6
+```
+*Fig. 2.4 — Esempio di B-tree di ordine 3: ogni nodo ha al massimo 2 chiavi e 3 puntatori ai figli; tutte le foglie si trovano allo stesso livello.*
 
 Costi delle operazioni su B-tree:
 
@@ -216,9 +268,19 @@ Costi delle operazioni su B-tree:
 
 I **B+-tree** sono una variante in cui tutti i record sono memorizzati ordinati nelle foglie, organizzate in una lista doppiamente concatenata. I nodi interni contengono solo la chiave massima del figlio puntato. Per la ricerca per intervallo il costo è $sf \cdot N_{leaves}$, molto migliore rispetto al B-tree.
 
-> [!note] Dove inserire l'immagine
->
-> **[IMMAGINE - Fig. 2.5]**: Esempio di B+-tree — foglie collegate in lista e nodi interni con solo chiavi.
+```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true}}}%%
+flowchart TD
+    R["15 | 30\nnodo interno"]
+    L1["5 | 10 | 14\nfoglia"]
+    L2["15 | 20 | 28\nfoglia"]
+    L3["30 | 35 | 40\nfoglia"]
+    R --> L1
+    R --> L2
+    R --> L3
+    L1 -->|"→"| L2 -->|"→"| L3
+```
+*Fig. 2.5 — Esempio di B+-tree: i nodi interni contengono solo chiavi di routing, tutti i dati risiedono nelle foglie collegate in lista doppiamente concatenata.*
 
 ---
 
@@ -263,7 +325,25 @@ La soluzione è partizionare lo spazio in aree con lo stesso numero di punti, co
 >
 > **[IMMAGINE - Fig. 2.7]**: Rappresentazione grafica di un dataset bidimensionale.
 > **[IMMAGINE - Fig. 2.8]**: Divisione dello spazio in partizioni — mostra la suddivisione alternata sugli assi.
-> **[IMMAGINE - Fig. 2.9]**: Esempio di codifica delle partizioni.
+
+```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true}}}%%
+flowchart TD
+    ROOT["ε\nintera regione"]
+    N0["0"]
+    N1["1"]
+    N00["00"]
+    N01["01"]
+    N10["10"]
+    N11["11"]
+    ROOT -->|"X ≤ med"| N0
+    ROOT -->|"X > med"| N1
+    N0 -->|"Y ≤ med"| N00
+    N0 -->|"Y > med"| N01
+    N1 -->|"Y ≤ med"| N10
+    N1 -->|"Y > med"| N11
+```
+*Fig. 2.9 — Albero di decisione per la codifica delle partizioni nel G-tree: i bit vengono aggiunti al codice del genitore ad ogni split, alternando l'asse di divisione.*
 
 #### G-tree
 

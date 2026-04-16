@@ -83,6 +83,9 @@ Un cavo, per essere utile, deve terminare in un connettore. Esistono due macro-c
 
 Tra i connettori passivi, il **connettore SC** è di dimensioni relativamente ingombranti, ma offre una superficie di contatto ampia che riduce al minimo la dispersione della luce nel punto di giunzione. È lo standard d'elezione per cablaggi metropolitani e collegamenti geografici gestiti dai *carrier* telefonici. Il **connettore LC** è invece estremamente compatto e ottimizzato per l'alta densità di porte: è lo standard assoluto all'interno dei rack dei data center. I vecchi standard FC e ST sono oggi da considerarsi obsoleti.
 
+![Connettori ottici LC (a sinistra) e SC (a destra) a confronto](https://commons.wikimedia.org/wiki/Special:FilePath/Lc-sc-fiber-connectors.jpg)
+*Fig. — I connettori LC e SC sono i due standard dominanti per la fibra ottica: LC per l'alta densità nei rack, SC per i cablaggi metropolitani.*
+
 > [!tip] La direzionalità della fibra ottica
 >
 > A differenza dei cavi in rame, un singolo filo di fibra ottica trasporta la luce in una sola direzione. Per avere una comunicazione full-duplex è sempre necessaria una **coppia di cavi**: uno per trasmettere (TX) e uno per ricevere (RX). I connettori LC vengono spesso accoppiati tramite una clip meccanica in plastica che può essere sfilata per invertire i due connettori quando è necessario far coincidere correttamente i canali TX e RX sui due estremi della connessione.
@@ -96,6 +99,9 @@ Tra i connettori passivi, il **connettore SC** è di dimensioni relativamente in
 Sebbene esistano reti dedicate all'HPC come **InfiniBand**, lo standard Ethernet su cavi in rame ricopre ancora un ruolo dominante, con oltre 70 miliardi di metri di cavo installati nel mondo. I moderni cavi Ethernet utilizzano il connettore **RJ45**, che circa trent'anni fa ha sostituito l'antico RJ11 telefonico. All'interno della guaina si trovano 8 fili intrecciati a formare 4 coppie: le reti a 10 e 100 Megabit ne utilizzavano solo due, rendendo storicamente semplice il passaggio a 1 Gigabit — fu sufficiente abilitare le due coppie rimaste inutilizzate all'interno dello stesso cavo.
 
 L'assemblaggio manuale avviene inserendo i fili secondo uno schema cromatico preciso all'interno del plug RJ45 e utilizzando una pressa crimpatrice, che forza piccoli contatti metallici "a lama" a tagliare la guaina dei singoli fili, stabilendo la connessione elettrica.
+
+![Connettore RJ45 Ethernet](https://commons.wikimedia.org/wiki/Special:FilePath/Ethernet_RJ45_connector_p1160054.jpg)
+*Fig. — Il connettore RJ45 con i suoi 8 pin; le 4 coppie di fili intrecciati sono visibili all'interno della guaina.*
 
 ### La Sfida dei 10 Gigabit
 

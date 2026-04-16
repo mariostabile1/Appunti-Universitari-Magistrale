@@ -108,7 +108,10 @@ Poiché l'acqua è un conduttore termico nettamente superiore all'aria — che f
 >
 > Il **CRAC** è la prima architettura industriale di raffreddamento ad aria, ancora in uso in strutture classiche — come alcuni building Aruba, con carichi web server prevedibili di circa 300 W per server. Prevede macchinari verticali disposti nella stanza, un **pavimento sopraelevato** (*raised floor* o *floating floor*) e piastrelle forate (*perforated tiles*) posizionate con cura di fronte ai rack.
 
-Il principio fisico alla base è la **convezione**: l'aria calda tende naturalmente a salire. Il ciclo di funzionamento è il seguente: il macchinario CRAC aspira l'aria calda dalla parte alta della stanza, genera aria fredda e la immette a pressione al di sotto del pavimento flottante. L'aria fredda viaggia nel *plenum* sottostante e risale solo attraverso le piastrelle perforate poste di fronte ai rack. Viene poi aspirata dalle ventole frontali dei server, li raffredda, ed esce come aria calda sul retro, risalendo verso il soffitto per ricominciare il ciclo.
+Il principio fisico alla base è la **convezione**: l'aria calda tende naturalmente a salire. Il ciclo di funzionamento è il seguente: il macchinario CRAC aspira l'aria calda dalla parte alta della stanza, genera aria fredda e la immette a pressione al di sotto del pavimento flottante. L'aria fredda viaggia nel *plenum* sottostante e risale solo attraverso le piastrelle perforate poste di fronte ai rack.
+
+![Sollevamento di una piastrella dal pavimento sopraelevato (raised floor) di un data center](https://commons.wikimedia.org/wiki/Special:FilePath/Tile-lifter-in-use-raised-floor.jpg)
+*Fig. — Il pavimento sopraelevato (*raised floor*) è la caratteristica strutturale che rende possibile il sistema CRAC: il *plenum* sottostante distribuisce l'aria fredda verso le piastrelle perforate posizionate davanti ai rack.* Viene poi aspirata dalle ventole frontali dei server, li raffredda, ed esce come aria calda sul retro, risalendo verso il soffitto per ricominciare il ciclo.
 
 > [!tip] La regola d'oro del CRAC
 >

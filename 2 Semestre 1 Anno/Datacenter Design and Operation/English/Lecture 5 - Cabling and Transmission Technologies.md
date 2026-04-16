@@ -83,6 +83,9 @@ A cable, to be useful, must terminate in a connector. There are two macro-catego
 
 Among passive connectors, the **SC connector** is relatively bulky in size, but offers a large contact surface that minimises light dispersion at the junction point. It is the standard of choice for metropolitan cabling and geographic links managed by telephone *carriers*. The **LC connector** is instead extremely compact and optimised for high port density: it is the absolute standard within data center racks. The old FC and ST standards are today to be considered obsolete.
 
+![LC (left) and SC (right) optical connectors compared](https://commons.wikimedia.org/wiki/Special:FilePath/Lc-sc-fiber-connectors.jpg)
+*Fig. — LC and SC are the two dominant standards for optical fibre: LC for high density in racks, SC for metropolitan cabling.*
+
 > [!tip] The directionality of optical fibre
 >
 > Unlike copper cables, a single optical fibre strand carries light in only one direction. To have full-duplex communication, a **pair of cables** is always required: one to transmit (TX) and one to receive (RX). LC connectors are often coupled via a plastic mechanical clip that can be removed to swap the two connectors when it is necessary to correctly match the TX and RX channels at the two ends of the connection.
@@ -96,6 +99,9 @@ Among passive connectors, the **SC connector** is relatively bulky in size, but 
 Although there are dedicated HPC networks such as **InfiniBand**, Ethernet on copper cables still plays a dominant role, with over 70 billion metres of cable installed worldwide. Modern Ethernet cables use the **RJ45** connector, which about thirty years ago replaced the old RJ11 telephone connector. Inside the sheath are 8 wires twisted into 4 pairs: 10 and 100 Megabit networks used only two, historically making the transition to 1 Gigabit simple — it was sufficient to enable the two pairs left unused inside the same cable.
 
 Manual assembly involves inserting the wires according to a precise colour scheme into the RJ45 plug and using a crimping press, which forces small "blade" metal contacts to cut through the individual wire sheaths, establishing the electrical connection.
+
+![RJ45 Ethernet connector](https://commons.wikimedia.org/wiki/Special:FilePath/Ethernet_RJ45_connector_p1160054.jpg)
+*Fig. — The RJ45 connector with its 8 pins; the 4 pairs of twisted wires are visible inside the sheath.*
 
 ### The 10 Gigabit Challenge
 

@@ -33,6 +33,9 @@ The dominant interface for HDDs was for years **SATA** (*Serial ATA*), born for 
 >
 > Modern mechanical drives reach capacities of **30–36 TB** (Samsung, Seagate, Western Digital, 2024). This progress exclusively reflects their use as *cold storage*: density is maximised because throughput is not critical.
 
+![Inside a Hard Disk Drive: rotating magnetic platters and read/write heads](https://upload.wikimedia.org/wikipedia/commons/3/38/Seagate_ST33232A_hard_disk_inner_view.jpg)
+*Fig. — The internal anatomy of a Seagate HDD: the rotating magnetic platters and the head arm make the mechanical constraint that limits latency to 3–5 ms visible.*
+
 ---
 
 ### The transition to SSD: 30x in a single leap
@@ -60,6 +63,9 @@ The effect on the bottleneck was immediate:
 | NVMe Gen 3 SSD (2016+) | 20–100 µs | ~3.5 GB/s |
 | NVMe Gen 4 SSD (2019+) | 10–50 µs | ~7 GB/s |
 | NVMe Gen 5 SSD (2022+) | 5–20 µs | 10–14 GB/s |
+
+![NVMe M.2 2280 SSD 1 TB](https://upload.wikimedia.org/wikipedia/commons/e/ed/1TB_2280_NVME_SSD.jpg)
+*Fig. — An NVMe SSD in M.2 2280 form factor: direct connection to the PCIe bus eliminates the SATA controller and brings bandwidth above 7 GB/s.*
 
 > [!tip] The controller as bottleneck
 >

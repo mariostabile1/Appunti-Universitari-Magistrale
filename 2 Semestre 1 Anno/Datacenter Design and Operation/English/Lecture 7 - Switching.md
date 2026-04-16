@@ -32,6 +32,9 @@ This trade-off has a practical consequence: **Jumbo frames**. In data centers it
 
 Parameters such as MTU are configured through the switch's **control plane**, typically via a **CLI** (Command Line Interface). The CLI of network switches has a modal structure: one enters a context (e.g. `vlan 3`), issues specific commands, then exits. This philosophy has spread well beyond networking: Linux's `ip` command, Windows' `netsh`, and even `docker` and other modern tools adopt the same paradigm of _verb + subcommand_.
 
+![SDN architecture: separation between application layer, control plane and infrastructure layer (data plane)](https://upload.wikimedia.org/wikipedia/commons/3/34/Software-defined-networking-SDN-architecture-source-Open-Networking-Foundation-ONF1.png)
+*Fig. — The functional separation between network planes according to the Open Networking Foundation: application layer (policy and management), control plane (routing logic) and infrastructure layer (line-rate forwarding in silicon).*
+
 > [!note] Philosophical note: Unix vs modern CLI
 > 
 > The traditional Unix philosophy envisaged small, atomic commands (`cp`, `ls`, `sort`) composed through pipes to build complex behaviours. The modern philosophy, probably born with Docker, prefers a single "fat" command with many subcommands (`docker ps`, `docker image`, `docker exec`). This reduces composability but simplifies management and versioning when the number of resources to manage is very high.
