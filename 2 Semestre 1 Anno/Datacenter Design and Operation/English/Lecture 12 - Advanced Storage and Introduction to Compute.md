@@ -55,13 +55,13 @@ A **vector database** combines the flexibility of NoSQL databases (heterogeneous
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
     A[Text / Document] --> B[LLM Encoder]
-    B --> C[Embedding Vector\n3000 dimensions]
+    B --> C[Embedding Vector<br/>3000 dimensions]
     C --> D[Vector Index]
     E[Text Query] --> F[LLM Encoder]
     F --> G[Query Vector]
-    G --> H{Search by\ncosine distance}
+    G --> H{Search by<br/>cosine distance}
     D --> H
-    H --> I[Semantically\nrelevant documents]
+    H --> I[Semantically<br/>relevant documents]
 ```
 *Fig. — Vector database pipeline: documents are indexed via embeddings; queries are resolved by semantic similarity in vector space.*
 
@@ -158,11 +158,11 @@ To manage backup costs on large datasets, **differential backup** is used:
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A[Full Backup\nweekly] --> B[Diff Day 1]
+    A[Full Backup<br/>weekly] --> B[Diff Day 1]
     B --> C[Diff Day 2]
     C --> D[Diff Day 3]
     D --> E[...]
-    E --> F[Full Backup\nweekly]
+    E --> F[Full Backup<br/>weekly]
 ```
 *Fig. — Differential backup scheme: a periodic full backup is complemented by daily incremental backups that store only modified blocks.*
 
@@ -230,10 +230,10 @@ At some point, single-core scaling plateaued: increasing the clock frequency bey
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A[Single Core\n80s-90s] --> B[Multi-Thread\nHyper-Threading]
-    B --> C[Multi-Core\nCPU]
-    C --> D[Multi-Tile CPU\nmodern]
-    D --> E[Multi-CPU\nServer]
+    A[Single Core<br/>80s-90s] --> B[Multi-Thread<br/>Hyper-Threading]
+    B --> C[Multi-Core<br/>CPU]
+    C --> D[Multi-Tile CPU<br/>modern]
+    D --> E[Multi-CPU<br/>Server]
 ```
 *Fig. — Evolution of the computational replication hierarchy: each level replicates the previous unit to increase parallelism while managing complexity at a higher abstraction level.*
 

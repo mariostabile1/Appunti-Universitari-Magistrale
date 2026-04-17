@@ -37,8 +37,8 @@ The evolution towards solid state storage has however pushed for the design of n
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A["SSD 2.5 inch\n(legacy form factor)"] -->|"same bay\nas HDD"| B["Traditional Server"]
-    C["Ruler SSD\n(native form factor)"] -->|"maximum\ndensity"| D["High-density Server\n1 PB / 1U"]
+    A["SSD 2.5 inch<br/>(legacy form factor)"] -->|"same bay<br/>as HDD"| B["Traditional Server"]
+    C["Ruler SSD<br/>(native form factor)"] -->|"maximum<br/>density"| D["High-density Server<br/>1 PB / 1U"]
 ```
 
 *Fig. — Comparison between the legacy form factor (2.5") and Ruler for solid state storage.*
@@ -98,7 +98,7 @@ A **snapshot** is a photograph of the state of a volume at a precise instant. If
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    S["Storage Volume\n(current state)"] --> SN1["Snapshot T1"]
+    S["Storage Volume<br/>(current state)"] --> SN1["Snapshot T1"]
     S --> SN2["Snapshot T2"]
     SN1 -.->|"rollback"| R["Restore to T1"]
 ```
@@ -125,13 +125,13 @@ flowchart LR
     end
 
     subgraph Fabric
-        F["Fibre Channel\nor iSCSI"]
+        F["Fibre Channel<br/>or iSCSI"]
     end
 
     subgraph Storage
-        CT1["Controller 1\n(active)"]
-        CT2["Controller 2\n(standby/active)"]
-        DE["Disk Enclosures\n(physical disks)"]
+        CT1["Controller 1<br/>(active)"]
+        CT2["Controller 2<br/>(standby/active)"]
+        DE["Disk Enclosures<br/>(physical disks)"]
     end
 
     Servers --> Fabric --> CT1 & CT2 --> DE
@@ -156,12 +156,12 @@ Physical storage is "sliced" into logical units called **LUNs** (*Logical Unit N
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    D1["Physical disk 1"] & D2["Physical disk 2"] & D3["Physical disk 3"] --> R["RAID 6\n(resilient super-disk)"]
-    R --> L1["LUN A\n(e.g. 500 GB)"]
-    R --> L2["LUN B\n(e.g. 1 TB)"]
-    R --> L3["LUN C\n(e.g. 200 GB)"]
-    L1 --> FS1["XFS File System\n(on Server 1)"]
-    L2 --> FS2["ext4 File System\n(on Server 2)"]
+    D1["Physical disk 1"] & D2["Physical disk 2"] & D3["Physical disk 3"] --> R["RAID 6<br/>(resilient super-disk)"]
+    R --> L1["LUN A<br/>(e.g. 500 GB)"]
+    R --> L2["LUN B<br/>(e.g. 1 TB)"]
+    R --> L3["LUN C<br/>(e.g. 200 GB)"]
+    L1 --> FS1["XFS File System<br/>(on Server 1)"]
+    L2 --> FS2["ext4 File System<br/>(on Server 2)"]
 ```
 
 *Fig. — SAN hierarchy: from physical disks to RAID, from LUNs to file systems on servers.*
@@ -244,7 +244,7 @@ flowchart LR
     App -->|"HEAD /bucket/id → metadata only"| OS
     App -->|"DELETE /bucket/id"| OS
     App -->|"COPY bucket/src → bucket/dst"| OS
-    DB["Database\n(tracks IDs)"] <-.->|"look up\nID"| App
+    DB["Database<br/>(tracks IDs)"] <-.->|"look up<br/>ID"| App
 ```
 
 *Fig. — The fundamental S3 object storage operations: PUT, GET, HEAD, DELETE, COPY.*
@@ -268,7 +268,7 @@ The solution adopted by implementations such as **RIAK** (cited by the professor
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    ID["Object ID\n(hash)"] --> RING["Address space\nmodelled as a ring"]
+    ID["Object ID<br/>(hash)"] --> RING["Address space<br/>modelled as a ring"]
     RING -->|"0% - 33%"| N1["Node A"]
     RING -->|"33% - 66%"| N2["Node B"]
     RING -->|"66% - 100%"| N3["Node C"]
@@ -313,17 +313,17 @@ The central idea is to **transpose the matrix**: instead of separating compute, 
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
     subgraph HCI Cluster
-        N1["Node 1\nCPU + RAM + Disks + NIC"]
-        N2["Node 2\nCPU + RAM + Disks + NIC"]
-        N3["Node 3\nCPU + RAM + Disks + NIC"]
+        N1["Node 1<br/>CPU + RAM + Disks + NIC"]
+        N2["Node 2<br/>CPU + RAM + Disks + NIC"]
+        N3["Node 3<br/>CPU + RAM + Disks + NIC"]
     end
 
-    SW["Non-blocking switch\neast-west traffic"]
+    SW["Non-blocking switch<br/>east-west traffic"]
     N1 <--> SW
     N2 <--> SW
     N3 <--> SW
 
-    VSAN["Software-Defined SAN\n(virtual, manages all disks)"]
+    VSAN["Software-Defined SAN<br/>(virtual, manages all disks)"]
     N1 & N2 & N3 --- VSAN
 ```
 
@@ -424,7 +424,7 @@ flowchart LR
         N3["Node C"] & N4["Node D"]
     end
 
-    N1 & N2 <-->|"fibre ~3ms physical\n(vendor threshold ~15ms)"| N3 & N4
+    N1 & N2 <-->|"fibre ~3ms physical<br/>(vendor threshold ~15ms)"| N3 & N4
 ```
 
 *Fig. — Metro cluster: cluster nodes are distributed across two distinct but geographically close datacenters.*
@@ -440,11 +440,11 @@ Beyond 300 km (e.g. Milan–Naples), latency exceeds the tolerable threshold for
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    HOT["Hot data"] --> T0["Tier 0: RAM\n(sub-millisecond)"]
-    WARM["Warm data"] --> T1["Tier 1: NVMe SSD\n(microseconds)"]
-    COLD["Cold data"] --> T2["Tier 2: SATA SSD\n(milliseconds)"]
-    ARCHIVE["Archive"] --> T3["Tier 3: HDD\n(10-20 ms)"]
-    T0 & T1 & T2 & T3 -.->|"auto-tiering"| MOVE["Automatic migration\nbased on access patterns"]
+    HOT["Hot data"] --> T0["Tier 0: RAM<br/>(sub-millisecond)"]
+    WARM["Warm data"] --> T1["Tier 1: NVMe SSD<br/>(microseconds)"]
+    COLD["Cold data"] --> T2["Tier 2: SATA SSD<br/>(milliseconds)"]
+    ARCHIVE["Archive"] --> T3["Tier 3: HDD<br/>(10-20 ms)"]
+    T0 & T1 & T2 & T3 -.->|"auto-tiering"| MOVE["Automatic migration<br/>based on access patterns"]
 ```
 
 *Fig. — Tiering hierarchy: data migrates automatically towards the most appropriate tier based on access frequency.*

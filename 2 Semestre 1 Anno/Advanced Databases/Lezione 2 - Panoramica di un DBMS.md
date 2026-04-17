@@ -80,12 +80,12 @@ Il **Buffer Manager** è responsabile del trasferimento di pagine tra la memoria
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    DISK[("Disco\nMemoria Permanente")]
+    DISK[("Disco<br/>Memoria Permanente")]
     subgraph BM["Buffer Manager"]
         subgraph POOL["Buffer Pool (array di frame)"]
             FR["Pagina  |  Pin Count  |  Dirty"]
         end
-        RPT["Resident Pages Table\nPID → Frame ID"]
+        RPT["Resident Pages Table<br/>PID → Frame ID"]
     end
     TXN(["Transazione"])
     DISK <-->|"Page In / Page Out"| POOL
@@ -271,10 +271,10 @@ I **B+-tree** sono una variante in cui tutti i record sono memorizzati ordinati 
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    R["15 | 30\nnodo interno"]
-    L1["5 | 10 | 14\nfoglia"]
-    L2["15 | 20 | 28\nfoglia"]
-    L3["30 | 35 | 40\nfoglia"]
+    R["15 | 30<br/>nodo interno"]
+    L1["5 | 10 | 14<br/>foglia"]
+    L2["15 | 20 | 28<br/>foglia"]
+    L3["30 | 35 | 40<br/>foglia"]
     R --> L1
     R --> L2
     R --> L3
@@ -329,7 +329,7 @@ La soluzione è partizionare lo spazio in aree con lo stesso numero di punti, co
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    ROOT["ε\nintera regione"]
+    ROOT["ε<br/>intera regione"]
     N0["0"]
     N1["1"]
     N00["00"]

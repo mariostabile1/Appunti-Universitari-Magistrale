@@ -54,13 +54,13 @@ Un **vector database** combina la flessibilità dei database NoSQL (collezioni d
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
     A[Testo / Documento] --> B[LLM Encoder]
-    B --> C[Embedding Vector\n3000 dimensioni]
+    B --> C[Embedding Vector<br/>3000 dimensioni]
     C --> D[Vector Index]
     E[Query testuale] --> F[LLM Encoder]
     F --> G[Query Vector]
-    G --> H{Ricerca per\ndistanza coseno}
+    G --> H{Ricerca per<br/>distanza coseno}
     D --> H
-    H --> I[Documenti semanticamente\nrilevanti]
+    H --> I[Documenti semanticamente<br/>rilevanti]
 ```
 *Fig. — Pipeline di un vector database: i documenti vengono indicizzati tramite embedding, e le query vengono risolte per similarità semantica nello spazio vettoriale.*
 
@@ -157,11 +157,11 @@ Per gestire il costo del backup su dataset di grandi dimensioni, si usa il **bac
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A[Full Backup\nsettimanale] --> B[Diff Day 1]
+    A[Full Backup<br/>settimanale] --> B[Diff Day 1]
     B --> C[Diff Day 2]
     C --> D[Diff Day 3]
     D --> E[...]
-    E --> F[Full Backup\nsettimanale]
+    E --> F[Full Backup<br/>settimanale]
 ```
 *Fig. — Schema di backup differenziale: un full backup periodico viene completato da backup incrementali giornalieri che conservano solo i blocchi modificati.*
 
@@ -229,10 +229,10 @@ A un certo punto, la scalabilità del singolo core si è stabilizzata: aumentare
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A[Single Core\nyears 80s-90s] --> B[Multi-Thread\nHyper-Threading]
-    B --> C[Multi-Core\nCPU]
-    C --> D[Multi-Tile CPU\nmoderno]
-    D --> E[Multi-CPU\nServer]
+    A[Single Core<br/>years 80s-90s] --> B[Multi-Thread<br/>Hyper-Threading]
+    B --> C[Multi-Core<br/>CPU]
+    C --> D[Multi-Tile CPU<br/>moderno]
+    D --> E[Multi-CPU<br/>Server]
 ```
 *Fig. — Evoluzione della gerarchia di replicazione computazionale: ogni livello replica l'unità precedente per aumentare il parallelismo gestendo la complessità a un livello di astrazione più alto.*
 
