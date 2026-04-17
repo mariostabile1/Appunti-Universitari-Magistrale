@@ -298,15 +298,16 @@ Non esiste generalmente una funzione esplicita per spostare le chiavi. Il valore
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart TD
-    APP["Applicazione Distribuita"] -- "Put(Key,Value)" --> DHT
-    APP -- "Get(Key)" --> DHT
-    DHT -- "Value" --> APP
-    subgraph DHT["Distributed Hash Table (CAN, Chord, Pastry, Tapestry…)"]
-        N1["Nodo 1"] --- N2["Nodo 2"]
-        N2 --- N3["Nodo 3"]
-        N3 --- ND["..."]
-        ND --- NN["Nodo N"]
-    end
+    APP["Applicazione Distribuita"]
+    APP -- "Put(Key, Value)" --> DHTBOX
+    APP -- "Get(Key)  →  ritorna Value" --> DHTBOX
+    DHTBOX["Distributed Hash Table<br/>(CAN, Chord, Pastry, Tapestry…)"]
+    DHTBOX --- N1 & N2 & N3 & ND & NN
+    N1("Nodo 1")
+    N2("Nodo 2")
+    N3("Nodo 3")
+    ND("...")
+    NN("Nodo N")
 ```
 
 *Fig. — L'API della DHT espone solo Put e Get all'applicazione, nascondendo completamente la complessità della distribuzione.*
@@ -339,11 +340,11 @@ La soluzione standard è usare i **virtual server**: ogni nodo fisico mantiene p
 
 ## Confronto tra Architetture
 
-| Approccio | Memoria per nodo | Overhead comunicazione | Query complesse | Falsi negativi | Robustezza |
-|---|---|---|---|---|---|
-| **Server Centralizzato** | $O(N)$ | $O(1)$ | Sì | No | No (SPOF) |
-| **P2P Non Strutturato (flooding)** | $O(1)$ | $O(N^2)$ | Sì | Sì | Sì |
-| **DHT** | $O(\log N)$ | $O(\log N)$ | No | No | Sì |
+| Approccio                          | Memoria per nodo | Overhead comunicazione | Query complesse | Falsi negativi | Robustezza |
+| ---------------------------------- | ---------------- | ---------------------- | --------------- | -------------- | ---------- |
+| **Server Centralizzato**           | $O(N)$           | $O(1)$                 | Sì              | Si             | No (SPOF)  |
+| **P2P Non Strutturato (flooding)** | $O(1)$           | $O(N^2)$               | Sì              | No             | Sì         |
+| **DHT**                            | $O(\log N)$      | $O(\log N)$            | No              | Si             | Sì         |
 
 ---
 
