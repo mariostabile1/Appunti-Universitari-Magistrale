@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiTrainFrontTunnel",
+      "LiMicrochip",
       "LiDatabaseBackup",
       "LiDatabaseZap",
-      "LiAlbum",
-      "LiCode2",
-      "LiEgg"
+      "LiAlbum"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -104,5 +104,7 @@
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 21 - (Lab) Network Emulator con ComNetsEmu.md": "LiCode2",
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 22 - (Lab) Multi-Access Edge Computing MEC.md": "LiAlbum",
   "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 11 - Storage Architetture e Servizi.md": "LiDatabaseZap",
-  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 12 - Storage Avanzato e Introduzione al Compute.md": "LiDatabaseBackup"
+  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 12 - Storage Avanzato e Introduzione al Compute.md": "LiDatabaseBackup",
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 23 - Embedded Programming e Arduino.md": "LiMicrochip",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 17 - Fungible e Non Fungible Tokens - ERC Standards.md": "LiTrainFrontTunnel"
 }
