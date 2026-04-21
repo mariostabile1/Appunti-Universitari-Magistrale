@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiScroll",
+      "LiBitcoin",
+      "LiWebhook",
       "LiNotebookPen",
-      "LiCodeXml",
-      "LiCode2",
-      "LiArrowBigUpDash",
-      "LiForkKnife"
+      "LiCodeXml"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -107,5 +107,10 @@
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 20 - (Lab) Solidity.md": "LiCode2",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 21 - (Lab) Solidity Avanzato.md": "LiCodeXml",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 22 - Fungible e Non Fungible Tokens - ERC Standards.md": "LiNotebookPen",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 23 - (Lab) Advanced Solidity - Vulnerabilities e Upgrading.md": "LiCodeXml"
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 23 - (Lab) Advanced Solidity - Vulnerabilities e Upgrading.md": "LiCodeXml",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 5 - (Lab) P2P Networks in Bitcoin ed Ethereum.md": "LiWebhook",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 10 - (Lab) Bitcoin con bitcoinj.md": "LiBitcoin",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 11 - (Lab) Bitcoin Transactions e Scripts.md": "LiBitcoin",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 13 - (Lab) Script Classification e blk.dat.md": "LiScroll",
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 17 - (Lab) Bitcoin Anonimato e Deanonimizzazione.md": "LiBitcoin"
 }
