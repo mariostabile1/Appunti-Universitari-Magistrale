@@ -5,7 +5,7 @@ tags:
   - smart-contracts
   - blockchain
 data: 2026-04-09
-lezione: "Lezione 14 — Ethereum: Accounts, Transactions, Gas"
+lezione: "Lezione 19 — Ethereum: Accounts, Transactions, Gas"
 professore: "Laura Ricci"
 ---
 # Ethereum: Account, Transazioni e Gas
