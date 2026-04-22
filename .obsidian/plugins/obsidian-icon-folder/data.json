@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiScroll",
-      "LiBitcoin",
-      "LiWebhook",
-      "LiNotebookPen",
-      "LiCodeXml"
+      "LiTrainFrontTunnel",
+      "LiMicrochip",
+      "LiDatabaseBackup",
+      "LiDatabaseZap",
+      "LiAlbum"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -93,24 +93,5 @@
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 22 - (Lab) Multi-Access Edge Computing MEC.md": "LiAlbum",
   "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 11 - Storage Architetture e Servizi.md": "LiDatabaseZap",
   "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 12 - Storage Avanzato e Introduzione al Compute.md": "LiDatabaseBackup",
-  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 23 - Embedded Programming e Arduino.md": "LiMicrochip",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 9 - Bitcoin.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 12 - Bitcoin Mining.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 14 - Bitcoin security.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 15 - Advanced Bitcoin Scripts.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 8 - Introduzione alla Blockchain.md": "LiBlocks",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 7 - Strutture Dati per DHT e Blockchain.md": "LiFolderTree",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 6 - Crittografia.md": "LiAlertCircle",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 16 - Lightning network of Bitcoin.md": "LiCloudLightning",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 18 - Hard and Soft Forks in Bitcoin.md": "LiForkKnife",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 19 - Ethereum Accounts Transactions Gas.md": "LiArrowBigUpDash",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 20 - (Lab) Solidity.md": "LiCode2",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 21 - (Lab) Solidity Avanzato.md": "LiCodeXml",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 22 - Fungible e Non Fungible Tokens - ERC Standards.md": "LiNotebookPen",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 23 - (Lab) Advanced Solidity - Vulnerabilities e Upgrading.md": "LiCodeXml",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 5 - (Lab) P2P Networks in Bitcoin ed Ethereum.md": "LiWebhook",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 10 - (Lab) Bitcoin con bitcoinj.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 11 - (Lab) Bitcoin Transactions e Scripts.md": "LiBitcoin",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 13 - (Lab) Script Classification e blk.dat.md": "LiScroll",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 17 - (Lab) Bitcoin Anonimato e Deanonimizzazione.md": "LiBitcoin"
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 23 - Embedded Programming e Arduino.md": "LiMicrochip"
 }
