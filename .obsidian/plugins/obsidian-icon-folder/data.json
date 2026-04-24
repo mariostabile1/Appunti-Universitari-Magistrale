@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiCpu",
       "LiBatteryCharging",
       "LiScroll",
       "LiBitcoin",
-      "LiWebhook",
-      "LiNotebookPen"
+      "LiWebhook"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -114,5 +114,6 @@
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 13 - (Lab) Script Classification e blk.dat.md": "LiScroll",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 17 - (Lab) Bitcoin Anonimato e Deanonimizzazione.md": "LiBitcoin",
   "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 24 - Energy Harvesting IoT.md": "LiBatteryCharging",
-  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 24 - IPFS Interplanetary File System.md": "LiScroll"
+  "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 24 - IPFS Interplanetary File System.md": "LiScroll",
+  "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 13 - Architettura Compute CPU GPU e NPU.md": "LiCpu"
 }
