@@ -254,6 +254,28 @@ $$B = B_{\mathrm{min}} + \frac{B_{\mathrm{max}} - B_{\mathrm{min}}}{x_{\mathrm{m
 > | Arduino | 7 V | 9 V | 0.00879 V | 10 | 795 | 1023 | 3000 | 800 | 359 |
 > | Tmote | 1.8 V | 3 V | 0.000732 V | 12 | 2457 | 4095 | 3000 | 3277 | 1652 |
 
+> [!example] Esercizio — Stima della carica da output ADC
+>
+> Un dispositivo campiona la tensione della batteria con un ADC a **10 bit**. La batteria ha una carica massima di **2000 mAh** e una tensione massima (batteria piena) di **10 V**. Quando la tensione scende a **8 V** la carica residua è **200 mAh** e il dispositivo non è più alimentabile.
+>
+> Calcolare la carica della batteria quando l'ADC restituisce: **920**, **830**, **1023**.
+>
+> **Soluzione**
+>
+> Con $d = 10$ bit si ha $2^d - 1 = 1023$ e $v_{\mathrm{ref}} = v_{\mathrm{max}} = 10\,\mathrm{V}$.
+>
+> $$x_{\mathrm{max}} = 1023 \qquad x_{\mathrm{min}} = \mathrm{ROUND}\!\left(\frac{8}{10} \times 1023\right) = \mathrm{ROUND}(818{,}4) = 818$$
+>
+> La carica si ricava per interpolazione lineare tra $(x_{\mathrm{min}},\, B_{\mathrm{min}})$ e $(x_{\mathrm{max}},\, B_{\mathrm{max}})$:
+>
+> $$B = B_{\mathrm{min}} + \frac{x - x_{\mathrm{min}}}{x_{\mathrm{max}} - x_{\mathrm{min}}} \cdot (B_{\mathrm{max}} - B_{\mathrm{min}})$$
+>
+> | $x$ | Calcolo | $B$ (mAh) |
+> |---|---|---|
+> | 920 | $200 + \dfrac{920 - 818}{1023 - 818} \times 1800 = 200 + \dfrac{102}{205} \times 1800$ | **≈ 1096** |
+> | 830 | $200 + \dfrac{830 - 818}{1023 - 818} \times 1800 = 200 + \dfrac{12}{205} \times 1800$ | **≈ 305** |
+> | 1023 | $200 + \dfrac{1023 - 818}{1023 - 818} \times 1800 = 200 + 1800$ | **2000** |
+
 ### Stima della produzione energetica
 
 Se si conosce il consumo $p_c(t)$ in un intervallo $[t_1, t_2]$ e si misura la carica agli estremi, la produzione $E_s$ si stima come:
