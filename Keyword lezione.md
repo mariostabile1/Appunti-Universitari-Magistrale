@@ -1,0 +1,8 @@
+- Differenza tra GPU e CPU, sul fatto che la gpu fa calcoli vettoriali.
+- NPU che cosa è e definizione.
+- accenno all'azienda Groq che è stata comprata da nvidia
+- abbiamo visto un report per il costo in termini di impatto di carbon e di consumi energetici del 2025, penso sia il report annuale di stemfort, fare osservazioni sui trend e sull'evaporazione dell'acqua.
+- abbiamo parlato del NUMA
+- abbiamo parlato dell'architettura della CPU con particolare enfasi sulla crossbar e come funziona
+- abbiamo parlato dell'OCP introdotta da Meta, non nel dettaglio ma almeno capire cosa è.
+- Abbiamo accennato il funzionamento del token ring (aggiungere foto di riferimento)
