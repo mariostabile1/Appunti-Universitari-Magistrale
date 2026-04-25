@@ -93,6 +93,26 @@ The crossbar provides **full bisection bandwidth**: with N sources and M destina
 >
 > AMD EPYC uses the **Infinity Fabric** as the main interconnect between the dies (chiplets) that make up the processor. Within each chiplet the fabric has crossbar characteristics; between different chiplets it operates as a high-speed packet network. This allows assembling CPUs with many cores by replicating smaller, more testable dies, reducing production costs.
 
+### Tiles: Silicon Modularity
+
+The concept of a **tile** emerges from the modern trend of building complex processors not from a single monolithic die but by aggregating multiple specialized dies through advanced packaging technologies. Each tile is an autonomous silicon unit — it may contain a group of cores, a portion of the L3 cache, a memory controller, or an I/O interface — designed and manufactured independently, then interconnected to the others via high-speed buses integrated into the package.
+
+Intel uses the term *tile* in its **Meteor Lake** architecture and in **Sapphire Rapids** Xeon processors: the chip is composed of a Compute Tile, a GPU Tile, a SoC Tile, and an I/O Tile, connected via **EMIB** (*Embedded Multi-die Interconnect Bridge*) or **Foveros** (3D stacking). AMD uses the equivalent term *chiplet* for the dies that make up EPYC processors.
+
+> [!tip] Advantages of the tile approach
+>
+> Each tile can be manufactured on the technology node best suited to its role: the Compute Tile on the most advanced node (where cost per transistor is minimized), the I/O Tile on a mature, economical node (where robustness matters more than density). A manufacturing defect affects a single tile rather than the entire die, improving **yield** — the percentage of functional chips from total production — and reducing the average processor cost.
+
+### Hyperthreading and Simultaneous Multithreading
+
+**Hyperthreading** (HT) is Intel's commercial name for the architectural mechanism known as **SMT** (*Simultaneous Multithreading*). The problem it solves is core idle time: the internal execution units — ALUs, floating-point units, load/store units — often sit idle when a thread stalls on a cache miss or an instruction dependency.
+
+Hyperthreading works around this waste by duplicating lightweight architectural resources — the **register file** (the registers visible to software) and the **program counter** — while keeping the physical execution units shared. The result is that the operating system sees **two logical cores** per physical core and can schedule two independent threads: when the first stalls, the core executes instructions from the second, reducing overall idle time. The actual benefit depends on the workload: memory-bound workloads benefit most; compute-dense, cache-friendly workloads see limited gains because both threads compete for the same execution units.
+
+> [!warning] Hyperthreading and side-channel vulnerabilities
+>
+> The sharing of physical resources between two threads — L1 cache, TLB, execution buffers — is also what opens an attack surface for side-channel vulnerabilities such as **Spectre** and **MDS** (*Microarchitectural Data Sampling*). In these attacks, a malicious thread observes timing variations in shared resources to infer data from the victim thread. Some high-security configurations disable HT entirely to eliminate this attack surface.
+
 ---
 
 ## NUMA — Non-Uniform Memory Access
@@ -286,3 +306,5 @@ Despite its elegant properties, Token Ring was superseded by Ethernet for econom
 > - What is the Open Compute Project and what problem motivated its creation?
 > - How does the token mechanism in Token Ring work? What advantages does it offer over Ethernet CSMA/CD?
 > - What do PUE and WUE measure? How do they combine in evaluating the sustainability of a datacenter?
+> - What is a tile in the context of modern CPU architecture? What advantages does it offer over a monolithic die in terms of yield and production cost?
+> - How does Hyperthreading work? Why does the performance gain depend on the type of workload?

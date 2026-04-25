@@ -93,6 +93,26 @@ La crossbar garantisce **banda di bisection completa**: se ci sono N sorgenti e 
 >
 > AMD EPYC utilizza l'**Infinity Fabric** come interconnessione principale tra i die (chiplet) che compongono il processore. All'interno di ogni chiplet il fabric ha caratteristiche di crossbar; tra chiplet diversi opera come una rete a pacchetti ad alta velocità. Questo permette di assemblare CPU con molti core replicando die più piccoli e collaudabili, riducendo i costi di produzione.
 
+### Tile: Modularità del Silicio
+
+Il concetto di **tile** nasce dalla tendenza moderna a costruire processori complessi non da un unico die monolitico, ma aggregando più die specializzati tramite tecnologie di packaging avanzate. Ogni tile è un'unità di silicio autonoma — può contenere un gruppo di core, una porzione di cache L3, un controller di memoria o un'interfaccia I/O — progettata e prodotta indipendentemente, poi interconnessa alle altre tramite bus ad alta velocità integrati nel package.
+
+Intel utilizza il termine *tile* nell'architettura **Meteor Lake** e nei processori Xeon **Sapphire Rapids**: il chip è composto da una *Compute Tile*, una *GPU Tile*, una *SoC Tile* e una *I/O Tile*, collegate tramite **EMIB** (*Embedded Multi-die Interconnect Bridge*) o **Foveros** (stacking 3D). AMD usa il termine equivalente *chiplet* per i die che compongono i processori EPYC.
+
+> [!tip] Vantaggi dell'approccio a tile
+>
+> Ogni tile può essere prodotta nel nodo tecnologico più adatto al suo ruolo: la Compute Tile sul nodo più avanzato (dove il costo per transistor è minimo), la I/O Tile su un nodo maturo ed economico (dove la robustezza conta più della densità). Inoltre, un difetto di fabbricazione colpisce una singola tile anziché l'intero die, migliorando il **yield** — la percentuale di chip funzionanti sul totale prodotto — e riducendo il costo medio del processore.
+
+### Hyperthreading e Multithreading Simultaneo
+
+L'**Hyperthreading** (HT) è il nome commerciale Intel per il meccanismo architetturale noto come **SMT** (*Simultaneous Multithreading*). Il problema che risolve è l'idle time dei core: le unità di esecuzione interne — ALU, unità floating-point, unità di load/store — rimangono spesso inattive quando un thread è in stallo su un cache miss o su una dipendenza tra istruzioni.
+
+L'Hyperthreading aggira questo spreco duplicando le risorse architetturali leggere — il **register file** (i registri visibili al software) e il **program counter** — mantenendo invece condivise le unità di esecuzione fisiche. Il risultato è che il sistema operativo vede **due core logici** per ogni core fisico e può schedulare due thread indipendenti: quando il primo è in stallo, il core esegue istruzioni del secondo, riducendo l'idle time complessivo. Il guadagno effettivo dipende fortemente dal workload: carichi con frequenti accessi a memoria beneficiano maggiormente; carichi computazionalmente densi e cache-friendly vedono vantaggi ridotti, poiché i due thread si contendono le stesse unità di esecuzione.
+
+> [!warning] Hyperthreading e vulnerabilità side-channel
+>
+> La condivisione delle risorse fisiche tra due thread — cache L1, TLB, buffer di esecuzione — è la stessa ragione per cui l'Hyperthreading apre una superficie d'attacco per vulnerabilità side-channel come **Spectre** e **MDS** (*Microarchitectural Data Sampling*). In questi attacchi, un thread malevolo osserva le variazioni di timing nelle risorse condivise per inferire dati del thread vittima. Alcune configurazioni di sicurezza ad alta sensibilità disabilitano HT per eliminare completamente questa superficie.
+
 ---
 
 ## NUMA — Non-Uniform Memory Access
@@ -286,3 +306,5 @@ Nonostante le sue proprietà eleganti, il Token Ring è stato soppiantato da Eth
 > - Cos'è l'Open Compute Project e quale problema ha motivato la sua nascita?
 > - Come funziona il meccanismo del token nel Token Ring? Quali vantaggi offre rispetto a Ethernet CSMA/CD?
 > - Cosa misurano PUE e WUE? Come si combinano nella valutazione della sostenibilità di un datacenter?
+> - Cos'è una tile nel contesto dell'architettura CPU moderna? Quali vantaggi offre rispetto al die monolitico in termini di yield e costo di produzione?
+> - Come funziona l'Hyperthreading? Perché il guadagno di prestazioni dipende dal tipo di workload?
