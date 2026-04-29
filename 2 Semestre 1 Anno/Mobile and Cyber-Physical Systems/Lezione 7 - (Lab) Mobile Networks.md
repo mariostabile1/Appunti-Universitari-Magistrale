@@ -428,7 +428,11 @@ sequenceDiagram
 - la **risposta attesa** $\text{xres}_{HSS}$ (la "verifica" della challenge);
 - le **chiavi di sessione**.
 
+<<<<<<< HEAD
 Manda `(auth_token, xres_HSS, keys)` all'MME, che inoltra solo l'`auth_token` all'UE attraverso la BS. L'UE, possedendo lui pure $K_{HSS\text{-}M}$, **decifra e verifica matematicamente** l'auth-token: se torna, significa che l'altra parte conosce davvero la chiave segreta — quindi è la vera home network. **A questo punto l'UE ha autenticato la rete.** Nel frattempo l'MME tiene da parte $\text{xres}_{HSS}$ per il passo (d).
+=======
+Manda `(auth_token, xres_HSS, keys)` all'MME, che inoltra solo l'`auth_token` all'UE attraverso la BS. L'UE, possedendo lui pure $K_{HSS\text{-}M}$, **decifra e verifica matematicamente** l'auth_token: se torna, significa che l'altra parte conosce davvero la chiave segreta — quindi è la vera home network. **A questo punto l'UE ha autenticato la rete.** Nel frattempo l'MME tiene da parte $\text{xres}_{HSS}$ per il passo (d).
+>>>>>>> origin/main
 
 **(c) UE risponde.** L'UE esegue **lo stesso calcolo crittografico** che ha fatto l'HSS, usando la sua copia di $K_{HSS\text{-}M}$, ottenendo $\text{res}_{M}$. Lo invia all'MME via BS.
 
