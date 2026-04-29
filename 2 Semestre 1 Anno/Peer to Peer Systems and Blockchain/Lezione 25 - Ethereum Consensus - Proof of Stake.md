@@ -148,9 +148,9 @@ Il meccanismo segue uno schema commit-reveal in quattro passi:
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": true}}}%%
 flowchart LR
-    A["1. COMMIT<br/>Ogni validatore genera<br/>un numero segreto e<br/>pubblica solo il suo hash"] --> B["2. REVEAL<br/>Dopo un certo slot,<br/>ogni validatore rivela<br/>il numero originale"]
-    B --> C["3. COMBINE<br/>Tutti i numeri rivelati<br/>vengono combinati<br/>con XOR → R"]
-    C --> D["4. SEED<br/>R diventa il seed<br/>per lo slot successivo,<br/>usato per shuffle validatori"]
+    A["COMMIT<br/>Ogni validatore genera<br/>un numero segreto e<br/>pubblica solo il suo hash"] --> B["REVEAL<br/>Dopo un certo slot,<br/>ogni validatore rivela<br/>il numero originale"]
+    B --> C["COMBINE<br/>Tutti i numeri rivelati<br/>vengono combinati<br/>con XOR"]
+    C --> D["SEED<br/>R diventa il seed<br/>per lo slot successivo,<br/>usato per shuffle validatori"]
 ```
 
 *Fig. — Il protocollo RANDAO: dalla generazione del segreto all'assegnazione dei ruoli.*

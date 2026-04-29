@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiActivity",
       "LiAlignCenterHorizontal",
       "LiTableProperties",
       "LiCpu",
-      "LiBatteryCharging",
-      "LiScroll"
+      "LiBatteryCharging"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -116,5 +116,6 @@
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 24 - IPFS Interplanetary File System.md": "LiScroll",
   "2 Semestre 1 Anno/Datacenter Design and Operation/Lezione 13 - Architettura Compute CPU GPU e NPU.md": "LiCpu",
   "2 Semestre 1 Anno/Peer to Peer Systems and Blockchain/Lezione 25 - Ethereum Consensus - Proof of Stake.md": "LiTableProperties",
-  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 7 - (Lab) Mobile Networks.md": "LiAlignCenterHorizontal"
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 7 - (Lab) Mobile Networks.md": "LiAlignCenterHorizontal",
+  "2 Semestre 1 Anno/Mobile and Cyber-Physical Systems/Lezione 25 - Teoria dei Segnali - Introduzione e Serie di Fourier.md": "LiActivity"
 }
